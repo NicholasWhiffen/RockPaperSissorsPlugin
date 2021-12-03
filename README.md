@@ -17,7 +17,7 @@ Create a div element with the id: "rps_game" in desired location in html file.
 Done!
 
 
-PLugin Information:
+Plugin Information:
 
 This plugin will create a 450px by 450px game box to the html.
 The user can select from the following game modes: best of 1, best of 3, best of 5.
