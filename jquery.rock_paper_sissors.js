@@ -3,18 +3,36 @@
     $.fn.rockPaperSissors = function(options){
 
         var settings = $.extend({
-            $gameDiv: {
-                width:  "400px",
-                border: "5px solid black",
-                padding: "100px"
+            image1: {
+                name: "Rock",
+                src: "assets/image1.jpeg"
             },
-            imageBorder: "5px solid black",
-            borderRadius: "5px",
-            imageWidth: "100px",
+            image2: {
+                name: "Paper",
+                src: "assets/image2.jpeg"
+            },
+            image3: {
+                name: "Sissors",
+                src: "assets/image3.jpeg"
+            },
+            winSound: {
+                src: "assets\\winSound.mp3"
+            },
+            $gameDiv: {
+                backgroundcolor: "rgb(136, 99, 255)"
+            },
+            buttons: {
+                backgroundcolor: "rgb(88, 62, 176)",
+                color: "white",
+            },
             imageCaption: {
-                exist: true,
-                color: "#ffffff",
-                fontSize: "20px"
+                color: "white"
+            },
+            score: {
+                color: "white"
+            },
+            win: function(){
+                console.log("win");
             }
         }, options)
 
@@ -40,7 +58,6 @@
         });
         
         
-
         $("#rps_game").on("click", "#choices button", function(){
             if(parseInt($(this).val()) == 4){
                 setGameStart();
@@ -75,8 +92,6 @@
             <br>\
             <span>?</span>\
             </div>\
-            
-            
             <div id="choices">\
                 <button type="button" id="1" value="1">${settings.image1.name}</button>\
                 <button type="button" id="2" value="2">${settings.image2.name}</button>\
@@ -84,11 +99,7 @@
             </div>\
             </div>`);
             $gameDiv.append(html);
-            
-            $("img").css({
-                "border": settings.imageBorder,
-                "border-radius": settings.borderRadius
-            });
+        
             $("span").css({
                 "color": settings.imageCaption.color
             })
@@ -98,7 +109,6 @@
             $(":button").css({
                 "background-color": settings.buttons.backgroundcolor,
                 "color": settings.buttons.color,
-                "border": settings.buttons.border
             });
 
         };
@@ -113,7 +123,7 @@
                 settings.win.call(this);
 
             }else if(loses > (gameAmount/2)){
-                $("#score").text(`YOU LOSE:(`);
+                $("#score").text(`YOU LOSE`);
                 $("#choices").empty();
                 $("#choices").append('<button type="button" id="playAgain" value="4">Play Again</button>');
     
@@ -121,7 +131,6 @@
             $(":button").css({
                 "background-color": settings.buttons.backgroundcolor,
                 "color": settings.buttons.color,
-                "border": settings.buttons.border
             });
         };
 
@@ -136,14 +145,11 @@
             $gameDiv.css({
                 "width": settings.$gameDiv.width,
                 "height": settings.$gameDiv.width,
-                "border": settings.$gameDiv.border,
-                "borderRadius": settings.$gameDiv.borderRadius,
                 "background-color": settings.$gameDiv.backgroundcolor
             });
             $(":button").css({
                 "background-color": settings.buttons.backgroundcolor,
-                "color": settings.buttons.color,
-                "border": settings.buttons.border
+                "color": settings.buttons.color
             });
         };
 

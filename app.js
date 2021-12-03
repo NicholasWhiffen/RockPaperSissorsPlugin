@@ -15,15 +15,12 @@ $("#rps_game").rockPaperSissors({
         src: "assets\\winSound.mp3"
     },
     $gameDiv: {
-        border: "3px solid rgb(149, 149, 149)",
         backgroundcolor: "rgb(136, 99, 255)"
     },
     buttons: {
         backgroundcolor: "rgb(88, 62, 176)",
         color: "white",
-        
     },
-    imageBorder: "3px solid rgb(149, 149, 149)",
     imageCaption: {
         color: "white"
     },
@@ -32,5 +29,5 @@ $("#rps_game").rockPaperSissors({
     },
     win: function(){
         console.log("win");
-    },
+    }
 });
