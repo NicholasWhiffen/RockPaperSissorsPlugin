@@ -1,0 +1,94 @@
+#rps_game{
+    text-align: "center";
+    padding: "50px";
+    border-radius: 10px;
+    width: 450px;
+    height: 450px;
+}
+
+#gameAmount{
+    margin-top: 35%;
+}
+
+#gameAmount button{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 10px;
+    display: block;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+}
+
+span{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#score{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#choices{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#choices button{
+    margin: 10px;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 10px;
+    display: block;
+}
+
+#choices :first-child {
+    margin-top: 20px;
+}
+
+#player1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#player2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+button{
+    display: block;
+    width: 33%;
+    padding: 5px 15px;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px rgb(149, 149, 149);
+}
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+

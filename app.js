@@ -1,29 +1,36 @@
 $("#rps_game").rockPaperSissors({
     image1: {
-        name: "rock",
-        src: "images/image1.jpeg"
+        name: "Rock",
+        src: "assets/image1.jpeg"
     },
     image2: {
-        name: "paper",
-        src: "images/image2.jpeg"
+        name: "Paper",
+        src: "assets/image2.jpeg"
     },
     image3: {
-        name: "sissors",
-        src: "images/image3.jpeg"
+        name: "Sissors",
+        src: "assets/image3.jpeg"
+    },
+    winSound: {
+        src: "assets\\winSound.mp3"
     },
     $gameDiv: {
-        width:  "400px",
-        height : "300px",
-        border: "5px solid black",
-        padding: "50px"
+        border: "3px solid rgb(149, 149, 149)",
+        backgroundcolor: "rgb(136, 99, 255)"
     },
-    imageBorder: "15px solid #ffffff",
-    borderRadius: "10px",
-    imageWidth: "100px",
-    imageHeight: "100px",
+    buttons: {
+        backgroundcolor: "rgb(88, 62, 176)",
+        color: "white",
+        
+    },
+    imageBorder: "3px solid rgb(149, 149, 149)",
     imageCaption: {
-        exist: true,
-        color: "#ffffff",
-        fontSize: "40px"
-    }
+        color: "white"
+    },
+    score: {
+        color: "white"
+    },
+    win: function(){
+        console.log("win");
+    },
 });
